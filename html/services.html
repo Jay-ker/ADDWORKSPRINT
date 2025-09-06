@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services - AddWorks Print | The Xpress Print & Branding Shop</title>
+       <!-- Favicon -->
+       <link rel="icon" type="image/png" sizes="32x32" href="css/js/images/ADDWORK LOGO.png">
+       <link rel="stylesheet" href="css/responsive.css" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+    }
+    
+    @keyframes slideInLeft {
+      from { opacity: 0; transform: translateX(-50px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+    
+    @keyframes slideInRight {
+      from { opacity: 0; transform: translateX(50px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+    
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes pulse-glow {
+      0%, 100% { box-shadow: 0 0 20px rgba(220, 38, 38, 0.3); }
+      50% { box-shadow: 0 0 40px rgba(220, 38, 38, 0.6); }
+    }
+    
+    .animate-float {
+      animation: float 6s ease-in-out infinite;
+    }
+    
+    .animate-slide-left {
+      animation: slideInLeft 0.8s ease-out;
+    }
+    
+    .animate-slide-right {
+      animation: slideInRight 0.8s ease-out;
+    }
+    
+    .animate-fade-up {
+      animation: fadeInUp 0.8s ease-out;
+    }
+
+    .animate-pulse-glow {
+      animation: pulse-glow 3s ease-in-out infinite;
+    }
+    
+    .gradient-text {
+      background: linear-gradient(135deg, #dc2626, #f59e0b);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .hero-gradient {
+      background: linear-gradient(135deg, #1f2937 0%, #374151 25%, #4b5563 50%, #6b7280 75%, #9ca3af 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero-gradient::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>') repeat;
+    }
+    
+    .service-card {
+      background: linear-gradient(145deg, #ffffff, #f8fafc);
+      box-shadow: 20px 20px 60px #d1d5db, -20px -20px 60px #ffffff;
+      border-radius: 24px;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      overflow: hidden;
+      position: relative;
+    }
+    
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, #dc2626, #f59e0b);
+      transition: left 0.5s ease;
+    }
+    
+    .service-card:hover::before {
+      left: 0;
+    }
+    
+    .service-card:hover {
+      transform: translateY(-15px) scale(1.02);
+      box-shadow: 25px 25px 80px #d1d5db, -25px -25px 80px #ffffff;
+    }
+    
+    .service-icon {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, #dc2626, #b91c1c);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 2rem;
+      margin: 0 auto 1.5rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 30px rgba(220, 38, 38, 0.3);
+    }
+    
+    .service-icon:hover {
+      transform: scale(1.1) rotate(10deg);
+      box-shadow: 0 15px 40px rgba(220, 38, 38, 0.5);
+    }
+    
+    .category-badge {
+      background: linear-gradient(135deg, #fbbf24, #f59e0b);
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      display: inline-block;
+      margin-bottom: 1rem;
+    }
+    
+    .process-step {
+      background: linear-gradient(145deg, #ffffff, #f3f4f6);
+      border-radius: 20px;
+      padding: 2rem;
+      text-align: center;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .process-step::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(220, 38, 38, 0.05) 0%, transparent 70%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    
+    .process-step:hover::before {
+      opacity: 1;
+    }
+    
+    .process-step:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    }
+    
+    .process-number {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, #dc2626, #b91c1c);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin: 0 auto 1rem;
+    }
+    
+    .section-divider {
+      height: 3px;
+      background: linear-gradient(90deg, transparent, #dc2626, #f59e0b, #dc2626, transparent);
+      margin: 4rem 0;
+      border-radius: 2px;
+    }
+    
+    .mobile-menu-hidden {
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, opacity 0.4s ease;
+    }
+    
+    .mobile-menu-visible {
+      max-height: 400px;
+      opacity: 1;
+      transition: max-height 0.4s ease, opacity 0.4s ease;
+    }
+
+    .image-placeholder {
+      background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+      border: 2px dashed #9ca3af;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #6b7280;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      border-radius: 12px;
+    }
+
+    .image-placeholder:hover {
+      border-color: #dc2626;
+      background: linear-gradient(135deg, #fef2f2, #fee2e2);
+      color: #dc2626;
+    }
+
+    .cta-gradient {
+      background: linear-gradient(135deg, #1f2937, #374151, #dc2626);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-gradient::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(220, 38, 38, 0.1) 0%, transparent 70%);
+      animation: float 8s ease-in-out infinite;
+    }
+
+    .pricing-card {
+      background: linear-gradient(145deg, #ffffff, #f8fafc);
+      border-radius: 24px;
+      padding: 2rem;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .pricing-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #dc2626, #f59e0b);
+    }
+
+    .pricing-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+    }
+
+    /* Menu button animation */
+    .menu-btn {
+      transition: transform 0.3s ease;
+    }
+
+    .menu-btn.active {
+      transform: rotate(90deg);
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Navbar -->
+  <header class="fixed w-full bg-white/95 backdrop-blur-sm shadow-lg z-50">
+    <div class="container mx-auto flex items-center justify-between p-4">
+      <a href="index.html" class="flex items-center gap-2">
+        <div class="h-10 w-10 rounded-full flex items-center justify-center overflow-hidden animate-pulse-glow">
+          <img src="css/js/images/WhatsApp Image 2025-08-25 at 3.29.19 PM.jpeg" alt="Logo" class="w-full h-full object-contain" />
+        </div>
+                <span class="font-bold text-xl text-red-600">ADDWORKS</span>
+      </a>
+      <nav class="hidden md:flex gap-6 font-medium">
+        <a href="index.html" class="hover:text-red-600 transition-colors">Home</a>
+        <a href="about.html" class="hover:text-red-600 transition-colors">About</a>
+        <a href="services.html" class="text-red-600 font-semibold">Services</a>
+        <a href="portfolio.html" class="hover:text-red-600 transition-colors">Portfolio</a>
+        <a href="contact.html" class="hover:text-red-600 transition-colors">Contact</a>
+      </nav>
+      <button id="menu-btn" class="md:hidden text-2xl focus:outline-none menu-btn">☰</button>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu-hidden bg-white shadow-lg md:hidden">
+      <div class="p-6">
+        <a href="index.html" class="block py-3 hover:text-red-600 transition-colors border-b border-gray-200">Home</a>
+        <a href="about.html" class="block py-3 hover:text-red-600 transition-colors border-b border-gray-200">About</a>
+        <a href="services.html" class="block py-3 text-red-600 font-semibold border-b border-gray-200">Services</a>
+        <a href="portfolio.html" class="block py-3 hover:text-red-600 transition-colors border-b border-gray-200">Portfolio</a>
+        <a href="contact.html" class="block py-3 hover:text-red-600 transition-colors">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-gradient pt-24 pb-20 text-white relative z-10">
+    <div class="container mx-auto px-6 text-center">
+      <div class="animate-float mb-8">
+        <div class="w-20 h-20 mx-auto bg-red-600 rounded-full flex items-center justify-center text-3xl">
+          🛠️
+        </div>
+      </div>
+      <h1 class="text-5xl md:text-7xl font-extrabold mb-6 animate-fade-up">
+        Our <span class="gradient-text">Services</span>
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto animate-fade-up">
+        Comprehensive printing and branding solutions tailored to elevate your business
+      </p>
+    </div>
+  </section>
+
+  <!-- Services Overview -->
+  <section class="py-20 px-6">
+    <div class="container mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold mb-6">
+          What We <span class="gradient-text">Offer</span>
+        </h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          From concept to completion, we provide end-to-end solutions that bring your vision to life with precision and creativity
+        </p>
+      </div>
+
+      <!-- Main Service Categories -->
+      <div class="grid md:grid-cols-3 gap-8 mb-20">
+        <!-- Branding & Design -->
+        <div class="service-card p-8 text-center">
+          <div class="category-badge">Creative Design</div>
+          <div class="service-icon">🎨</div>
+          <h3 class="font-bold text-2xl mb-4">Branding & Design</h3>
+          <p class="text-gray-600 mb-6 leading-relaxed">
+            Creative graphic design solutions that bring your brand vision to life with stunning visual identity and memorable designs.
+          </p>
+          
+<!-- Branding Portfolio Image -->
+<div class="h-48 mb-6 overflow-hidden rounded-lg">
+  <img src="css/js/images/ADDWORK LOGO.png" alt="Branding Portfolio" class="w-full h-full object-cover" />
+</div>
+          
+          <ul class="text-left text-gray-600 space-y-2 mb-6">
+            <li class="flex items-center gap-2">
+              <span class="w-2 h-2 bg-red-600 rounded-full"></span>
+              Logo Design & Brand Identity
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-2 h-2 bg-red-600 rounded-full"></span>
+              Business Cards & Stationery
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-2 h-2 bg-red-600 rounded-full"></span>
+              Marketing Materials
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-2 h-2 bg-red-600 rounded-full"></span>
+              Digital Graphics
+            </li>
+          </ul>
+          
+          <a href="contact.html" class="bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition-colors font-semibold">
+            Get Quote
+          </a>
+        </div>
+
+        <!-- Printing Solutions -->
+        <div class="service-card p-8 text-center">
+          <div class="category-badge">Print Solutions</div>
+          <div class="service-icon">🖨️</div>
+          <h3 class="font-bold text-2xl mb-4">Printing Solutions</h3>
+          <p class="text-gray-600 mb-6 leading-relaxed">
+            Professional printing services from small format to large scale projects, including signage, cladding, books, and more.
+          </p>
+          
+<!-- Branding Portfolio Image -->
+<div class="h-48 mb-6 overflow-hidden rounded-lg">
+  <img src="css/js/images/ADDWORK LOGO.png" alt="Branding Portfolio" class="w-full h-full object-cover" />
+</div>
+          
+          <ul class="text-left text-gray-600 space-y-2 mb-6">
+            <li class="flex items-center gap-2">
+              <span class="w-2 h-2 bg-red-600 rounded-full"></span>
+              Large Format Printing
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-2 h-2 bg-red-600 rounded-full"></span>
+              Banners & Signage
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-2 h-2 bg-red-600 rounded-full"></span>
+              Book & Magazine Printing
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-2 h-2 bg-red-600 rounded-full"></span>
+              Wall Cladding & Wraps
+            </li>
+          </ul>
+          
+          <a href="contact.html" class="bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition-colors font-semibold">
+            Get Quote
+          </a>
+        </div>
+
+        <!-- Videography -->
+        <div class="service-card p-8 text-center">
+          <div class="category-badge">Media Production</div>
+          <div class="service-icon">🎬</div>
+          <h3 class="font-bold text-2xl mb-4">Videography</h3>
+          <p class="text-gray-600 mb-6 leading-relaxed">
+            Professional video production services for events, commercials, and promotional content that captures your story perfectly.
+          </p>
+          
+<!-- Printing Showcase Image -->
+<div class="h-48 mb-6 overflow-hidden rounded-lg">
+  <img src="css/js/images/ADDWORK LOGO.png" alt="Printing Showcase" class="w-full h-full object-cover" />
+</div>
+          
+          <ul class="text-left text-gray-600 space-y-2 mb-6">
+            <li class="flex items-center gap-2">
+              <span class="w-2 h-2 bg-red-600 rounded-full"></span>
+              Event Coverage
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-2 h-2 bg-red-600 rounded-full"></span>
+              Commercial Videos
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-2 h-2 bg-red-600 rounded-full"></span>
+              Product Photography
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-2 h-2 bg-red-600 rounded-full"></span>
+              Social Media Content
+            </li>
+          </ul>
+          
+          <a href="contact.html" class="bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition-colors font-semibold">
+            Get Quote
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+<!-- Specialized Services -->
+<section class="py-20 px-6 bg-gray-100">
+  <div class="container mx-auto">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold mb-6">
+        <span class="gradient-text">Specialized</span> Services
+      </h2>
+      <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+        Premium services designed for specific needs and special occasions
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Fabric Box Branding -->
+      <div class="service-card p-6">
+        <div class="service-icon">📦</div>
+        <h3 class="font-bold text-xl mb-3">Fabric Box Branding</h3>
+        <p class="text-gray-600 mb-4">Premium fabric box branding and packaging solutions for luxury brands.</p>
+        <img src="css/js/images/ADDWORK LOGO.png" alt="Fabric Box Branding" class="h-32 w-full object-cover rounded-lg mb-4" />
+        <a href="contact.html" class="text-red-600 font-semibold hover:underline">Learn More →</a>
+      </div>
+
+      <!-- Vehicle Wrapping -->
+      <div class="service-card p-6">
+        <div class="service-icon">🚗</div>
+        <h3 class="font-bold text-xl mb-3">Vehicle Wrapping</h3>
+        <p class="text-gray-600 mb-4">Transform your vehicle into a mobile billboard with professional wraps.</p>
+        <img src="css/js/images/ADDWORK LOGO.png" alt="Vehicle Wrapping" class="h-32 w-full object-cover rounded-lg mb-4" />
+        <a href="contact.html" class="text-red-600 font-semibold hover:underline">Learn More →</a>
+      </div>
+
+      <!-- Wedding Stationery -->
+      <div class="service-card p-6">
+        <div class="service-icon">💒</div>
+        <h3 class="font-bold text-xl mb-3">Wedding Stationery</h3>
+        <p class="text-gray-600 mb-4">Elegant wedding invitations and stationery for your special day.</p>
+        <img src="css/js/images/ADDWORK LOGO.png" alt="Wedding Stationery" class="h-32 w-full object-cover rounded-lg mb-4" />
+        <a href="contact.html" class="text-red-600 font-semibold hover:underline">Learn More →</a>
+      </div>
+
+      <!-- Exhibition Stands -->
+      <div class="service-card p-6">
+        <div class="service-icon">🏢</div>
+        <h3 class="font-bold text-xl mb-3">Exhibition Stands</h3>
+        <p class="text-gray-600 mb-4">Eye-catching exhibition stands and trade show displays.</p>
+        <img src="css/js/images/ADDWORK LOGO.png" alt="Exhibition Stands" class="h-32 w-full object-cover rounded-lg mb-4" />
+        <a href="contact.html" class="text-red-600 font-semibold hover:underline">Learn More →</a>
+      </div>
+
+      <!-- Outdoor Advertising -->
+      <div class="service-card p-6">
+        <div class="service-icon">🪧</div>
+        <h3 class="font-bold text-xl mb-3">Outdoor Advertising</h3>
+        <p class="text-gray-600 mb-4">Billboard design and large-scale outdoor advertising solutions.</p>
+        <img src="css/js/images/ADDWORK LOGO.png" alt="Outdoor Advertising" class="h-32 w-full object-cover rounded-lg mb-4" />
+        <a href="contact.html" class="text-red-600 font-semibold hover:underline">Learn More →</a>
+      </div>
+
+      <!-- Interior Branding -->
+      <div class="service-card p-6">
+        <div class="service-icon">🏠</div>
+        <h3 class="font-bold text-xl mb-3">Interior Branding</h3>
+        <p class="text-gray-600 mb-4">Complete interior branding and environmental design solutions.</p>
+        <img src="css/js/images/ADDWORK LOGO.png" alt="Interior Branding" class="h-32 w-full object-cover rounded-lg mb-4" />
+        <a href="contact.html" class="text-red-600 font-semibold hover:underline">Learn More →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <div class="section-divider"></div>
+
+  <!-- Our Process -->
+  <section class="py-20 px-6">
+    <div class="container mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold mb-6">
+          Our <span class="gradient-text">Process</span>
+        </h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          From initial consultation to final delivery, we ensure a smooth and professional experience
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-4 gap-8">
+        <div class="process-step">
+          <div class="process-number">1</div>
+          <h3 class="font-bold text-xl mb-3">Consultation</h3>
+          <p class="text-gray-600">We discuss your vision, requirements, and project goals in detail.</p>
+        </div>
+        
+        <div class="process-step">
+          <div class="process-number">2</div>
+          <h3 class="font-bold text-xl mb-3">Design</h3>
+          <p class="text-gray-600">Our creative team develops concepts and designs tailored to your brand.</p>
+        </div>
+        
+        <div class="process-step">
+          <div class="process-number">3</div>
+          <h3 class="font-bold text-xl mb-3">Production</h3>
+          <p class="text-gray-600">Using premium materials and cutting-edge technology for superior results.</p>
+        </div>
+        
+        <div class="process-step">
+          <div class="process-number">4</div>
+          <h3 class="font-bold text-xl mb-3">Delivery</h3>
+          <p class="text-gray-600">Fast and reliable delivery with complete quality assurance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Packages -->
+  <section class="py-20 px-6 bg-gray-100">
+    <div class="container mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold mb-6">
+          <span class="gradient-text">Pricing</span> Packages
+        </h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          Flexible pricing options designed to meet different budgets and project scales
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Starter Package -->
+        <div class="pricing-card text-center">
+          <h3 class="text-2xl font-bold mb-4">Starter</h3>
+          <div class="text-4xl font-bold text-red-600 mb-6">₦50k+</div>
+          <ul class="text-left space-y-3 mb-8">
+            <li class="flex items-center gap-2">
+              <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+              Full brand identity
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+              1-2 Revisions
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+              Basic Logo Design
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+              Business Cards (500pcs)
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+              Letterhead Design
+            </li>
+          </ul>
+          <a href="contact.html" class="block bg-red-600 text-white py-3 rounded-lg hover:bg-red-700 transition-colors font-semibold">
+            Get Quote
+          </a>
+        </div>
+        
+<!-- Professional Package -->
+<div class="pricing-card text-center transform scale-105 border-4 border-red-600">
+  <div class="bg-red-600 text-white py-2 px-4 rounded-full text-sm font-bold mb-4 inline-block">
+    Most Popular
+  </div>
+  <h3 class="text-2xl font-bold mb-4">Professional</h3>
+  <div class="text-4xl font-bold text-red-600 mb-6">₦150k+</div>
+  <ul class="text-left space-y-3 mb-8">
+    <li class="flex items-center gap-2">
+      <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+      Complete Brand Identity
+    </li>
+    <li class="flex items-center gap-2">
+      <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+      Marketing Materials
+    </li>
+    <li class="flex items-center gap-2">
+      <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+      Large Format Printing
+    </li>
+    <li class="flex items-center gap-2">
+      <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+      5+ Revisions
+    </li>
+  </ul>
+  <a href="contact.html" class="block bg-red-600 text-white py-3 rounded-lg hover:bg-red-700 transition-colors font-semibold">
+    Get Quote
+  </a>
+</div>
+
+        <!-- Enterprise Package -->
+        <div class="pricing-card text-center">
+          <h3 class="text-2xl font-bold mb-4">Enterprise</h3>
+          <div class="text-4xl font-bold text-red-600 mb-6">₦300k+</div>
+          <ul class="text-left space-y-3 mb-8">
+            <li class="flex items-center gap-2">
+              <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+              Full Brand Package
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+              Video Production
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+              Premium Materials
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+              Unlimited Revisions
+            </li>
+          </ul>
+          <a href="contact.html" class="block bg-red-600 text-white py-3 rounded-lg hover:bg-red-700 transition-colors font-semibold">
+            Get Quote
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="cta-gradient py-20 px-6 text-white relative">
+    <div class="container mx-auto text-center relative z-10">
+      <h2 class="text-4xl md:text-5xl font-bold mb-6">
+        Ready to Transform Your <span class="text-yellow-400">Brand?</span>
+      </h2>
+      <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+        Let's work together to create something amazing that will make your business stand out from the competition
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="contact.html" class="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors">
+          Start Your Project
+        </a>
+        <a href="portfolio.html" class="bg-transparent border-2 border-white hover:bg-white hover:text-gray-800 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all">
+          View Our Work
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-12 px-6">
+    <div class="container mx-auto">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <div class="flex items-center gap-2 mb-4">
+            <div class="h-10 w-10 bg-red-600 rounded-full flex items-center justify-center">
+              <span class="font-bold text-lg">A</span>
+            </div>
+            <span class="font-bold text-xl">ADDWORKS</span>
+          </div>
+          <p class="text-gray-400">
+            Your trusted partner for comprehensive printing and branding solutions.
+          </p>
+        </div>
+        
+        <div>
+          <h3 class="font-bold text-lg mb-4">Services</h3>
+          <ul class="space-y-2 text-gray-400">
+            <li><a href="#" class="hover:text-white transition-colors">Branding & Design</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Printing Solutions</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Videography</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Specialized Services</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="font-bold text-lg mb-4">Company</h3>
+          <ul class="space-y-2 text-gray-400">
+            <li><a href="about.html" class="hover:text-white transition-colors">About Us</a></li>
+            <li><a href="portfolio.html" class="hover:text-white transition-colors">Portfolio</a></li>
+            <li><a href="contact.html" class="hover:text-white transition-colors">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="font-bold text-lg mb-4">Contact</h3>
+          <div class="space-y-2 text-gray-400">
+            <p>📧 info@addworksprint.com</p>
+            <p>📱 +234 123 456 7890</p>
+            <p>📍 Lagos, Nigeria</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+        <p>&copy; 2024 AddWorks Print. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript for Mobile Menu -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const menuBtn = document.getElementById('menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      
+      menuBtn.addEventListener('click', function() {
+        // Toggle the menu visibility
+        if (mobileMenu.classList.contains('mobile-menu-hidden')) {
+          mobileMenu.classList.remove('mobile-menu-hidden');
+          mobileMenu.classList.add('mobile-menu-visible');
+          menuBtn.classList.add('active');
+          menuBtn.innerHTML = '✕';
+        } else {
+          mobileMenu.classList.remove('mobile-menu-visible');
+          mobileMenu.classList.add('mobile-menu-hidden');
+          menuBtn.classList.remove('active');
+          menuBtn.innerHTML = '☰';
+        }
+      });
+
+      // Close menu when clicking on a link
+      const mobileLinks = mobileMenu.querySelectorAll('a');
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          mobileMenu.classList.remove('mobile-menu-visible');
+          mobileMenu.classList.add('mobile-menu-hidden');
+          menuBtn.classList.remove('active');
+          menuBtn.innerHTML = '☰';
+        });
+      });
+
+      // Close menu when clicking outside
+      document.addEventListener('click', function(e) {
+        if (!menuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+          mobileMenu.classList.remove('mobile-menu-visible');
+          mobileMenu.classList.add('mobile-menu-hidden');
+          menuBtn.classList.remove('active');
+          menuBtn.innerHTML = '☰';
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

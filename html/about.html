@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - AddWorks Print | The Xpress Print & Branding Shop</title>
+       <!-- Favicon -->
+       <link rel="icon" type="image/png" sizes="32x32" href="css/js/images/ADDWORK LOGO.png">
+       <link rel="stylesheet" href="css/responsive.css" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+    }
+    
+    @keyframes slideInLeft {
+      from { opacity: 0; transform: translateX(-50px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+    
+    @keyframes slideInRight {
+      from { opacity: 0; transform: translateX(50px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+    
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .animate-float {
+      animation: float 6s ease-in-out infinite;
+    }
+    
+    .animate-slide-left {
+      animation: slideInLeft 0.8s ease-out;
+    }
+    
+    .animate-slide-right {
+      animation: slideInRight 0.8s ease-out;
+    }
+    
+    .animate-fade-up {
+      animation: fadeInUp 0.8s ease-out;
+    }
+    
+    .gradient-text {
+      background: linear-gradient(135deg, #dc2626, #f59e0b);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .hero-gradient {
+      background: linear-gradient(135deg, #1f2937 0%, #374151 25%, #4b5563 50%, #6b7280 75%, #9ca3af 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero-gradient::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>') repeat;
+    }
+    
+    .stats-gradient {
+      background: linear-gradient(135deg, #fbbf24, #f59e0b, #ef4444);
+    }
+    
+    .team-card {
+      background: linear-gradient(145deg, #ffffff, #f3f4f6);
+      box-shadow: 20px 20px 60px #d1d5db, -20px -20px 60px #ffffff;
+      border-radius: 20px;
+      transition: all 0.3s ease;
+    }
+    
+    .team-card:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 25px 25px 80px #d1d5db, -25px -25px 80px #ffffff;
+    }
+    
+    .value-icon {
+      background: linear-gradient(135deg, #dc2626, #b91c1c);
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      color: white;
+      margin: 0 auto 1rem;
+      transition: all 0.3s ease;
+    }
+    
+    .value-icon:hover {
+      transform: scale(1.1) rotate(10deg);
+    }
+    
+    .section-divider {
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #dc2626, transparent);
+      margin: 4rem 0;
+    }
+    
+    .mobile-menu-hidden {
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+    }
+    
+    .mobile-menu-visible {
+      max-height: 300px;
+      opacity: 1;
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Navbar -->
+  <header class="fixed w-full bg-white/95 backdrop-blur-sm shadow-lg z-50">
+    <div class="container mx-auto flex items-center justify-between p-4">
+      <a href="index.html" class="flex items-center gap-2">
+        <div class="h-10 w-10 rounded-full flex items-center justify-center overflow-hidden">
+          <img src="css/js/images/WhatsApp Image 2025-08-25 at 3.29.19 PM.jpeg" alt="Logo" class="w-full h-full object-contain" />
+        </div>
+                <span class="font-bold text-xl text-red-600">ADDWORKS</span>
+      </a>
+      <nav class="hidden md:flex gap-6 font-medium">
+        <a href="index.html" class="hover:text-red-600 transition-colors">Home</a>
+        <a href="about.html" class="text-red-600 font-semibold">About</a>
+        <a href="services.html" class="hover:text-red-600 transition-colors">Services</a>
+        <a href="portfolio.html" class="hover:text-red-600 transition-colors">Portfolio</a>
+        <a href="contact.html" class="hover:text-red-600 transition-colors">Contact</a>
+      </nav>
+      <button id="menu-btn" class="md:hidden text-2xl focus:outline-none transition-transform duration-300">☰</button>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu-hidden bg-white shadow-lg md:hidden">
+      <div class="p-6">
+        <a href="index.html" class="block py-3 hover:text-red-600 transition-colors border-b border-gray-200">Home</a>
+        <a href="about.html" class="block py-3 text-red-600 font-semibold border-b border-gray-200">About</a>
+        <a href="services.html" class="block py-3 hover:text-red-600 transition-colors border-b border-gray-200">Services</a>
+        <a href="portfolio.html" class="block py-3 hover:text-red-600 transition-colors border-b border-gray-200">Portfolio</a>
+        <a href="contact.html" class="block py-3 hover:text-red-600 transition-colors">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-gradient pt-24 pb-20 text-white relative z-10">
+    <div class="container mx-auto px-6 text-center">
+      <h1 class="text-5xl md:text-7xl font-extrabold mb-6 animate-fade-up">
+        About <span class="gradient-text">AddWorks</span>
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto animate-fade-up">
+        Where creativity meets precision in the world of printing and branding
+      </p>
+      <div class="mt-8 animate-float">
+        <div class="w-20 h-20 mx-auto bg-red-600 rounded-full flex items-center justify-center text-3xl">
+          🎨
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Story Section -->
+  <section class="py-20 px-6">
+    <div class="container mx-auto">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="animate-slide-left">
+          <h2 class="text-4xl md:text-5xl font-bold mb-6">
+            Our <span class="gradient-text">Story</span>
+          </h2>
+          <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+            Founded in the heart of Lagos, AddWorks Print emerged from a simple vision: to transform ideas into tangible, impactful brand experiences. We're not just a printing shop – we're your creative partners in building brands that resonate.
+          </p>
+          <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+            From our humble beginnings to becoming Lagos's premier printing and branding destination, we've maintained our commitment to excellence, innovation, and customer satisfaction.
+          </p>
+          <div class="flex items-center gap-4">
+            <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center text-white text-2xl">
+              ⚡
+            </div>
+            <div>
+              <h3 class="font-bold text-xl">Fast & Reliable</h3>
+              <p class="text-gray-600">Your projects delivered on time, every time</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="animate-slide-right">
+          <div class="relative">
+            <div class="bg-gradient-to-br from-red-500 to-orange-400 rounded-3xl p-8 text-white shadow-2xl transform rotate-3">
+              <div class="bg-white/20 backdrop-blur-sm rounded-2xl p-6">
+                <h3 class="text-2xl font-bold mb-4">🏆 Excellence Since Day One</h3>
+                <div class="space-y-3">
+                  <div class="flex items-center gap-3">
+                    <span class="w-2 h-2 bg-white rounded-full"></span>
+                    <span>Premium Quality Materials</span>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <span class="w-2 h-2 bg-white rounded-full"></span>
+                    <span>State-of-the-art Equipment</span>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <span class="w-2 h-2 bg-white rounded-full"></span>
+                    <span>Creative Design Team</span>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <span class="w-2 h-2 bg-white rounded-full"></span>
+                    <span>24/7 Customer Support</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- Stats Section -->
+  <section class="py-16">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold mb-4">Our <span class="gradient-text">Impact</span></h2>
+        <p class="text-lg text-gray-600">Numbers that speak to our commitment</p>
+      </div>
+      
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div class="text-center animate-fade-up">
+          <div class="stats-gradient rounded-2xl p-6 text-white mb-4">
+            <h3 class="text-4xl font-bold">500+</h3>
+          </div>
+          <p class="font-semibold">Projects Completed</p>
+        </div>
+        
+        <div class="text-center animate-fade-up">
+          <div class="stats-gradient rounded-2xl p-6 text-white mb-4">
+            <h3 class="text-4xl font-bold">200+</h3>
+          </div>
+          <p class="font-semibold">Happy Clients</p>
+        </div>
+        
+        <div class="text-center animate-fade-up">
+          <div class="stats-gradient rounded-2xl p-6 text-white mb-4">
+            <h3 class="text-4xl font-bold">5+</h3>
+          </div>
+          <p class="font-semibold">Years Experience</p>
+        </div>
+        
+        <div class="text-center animate-fade-up">
+          <div class="stats-gradient rounded-2xl p-6 text-white mb-4">
+            <h3 class="text-4xl font-bold">24/7</h3>
+          </div>
+          <p class="font-semibold">Support</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- Our Values Section -->
+  <section class="py-20 px-6 bg-gray-100">
+    <div class="container mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">
+          Our <span class="gradient-text">Values</span>
+        </h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          The principles that guide everything we do and every relationship we build
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white p-8 rounded-2xl shadow-lg text-center hover:shadow-2xl transition-all duration-300">
+          <div class="value-icon">💡</div>
+          <h3 class="text-2xl font-bold mb-4">Innovation</h3>
+          <p class="text-gray-600">We stay ahead of trends and technology to deliver cutting-edge solutions that make your brand stand out.</p>
+        </div>
+        
+        <div class="bg-white p-8 rounded-2xl shadow-lg text-center hover:shadow-2xl transition-all duration-300">
+          <div class="value-icon">🤝</div>
+          <h3 class="text-2xl font-bold mb-4">Partnership</h3>
+          <p class="text-gray-600">We work closely with our clients as partners, understanding their vision and bringing it to life with precision.</p>
+        </div>
+        
+        <div class="bg-white p-8 rounded-2xl shadow-lg text-center hover:shadow-2xl transition-all duration-300">
+          <div class="value-icon">⭐</div>
+          <h3 class="text-2xl font-bold mb-4">Excellence</h3>
+          <p class="text-gray-600">Every project receives our full attention to detail, ensuring the highest quality output every single time.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="py-20 px-6">
+    <div class="container mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">
+          Meet Our <span class="gradient-text">Team</span>
+        </h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          The creative minds and skilled hands behind every exceptional project
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="team-card p-8 text-center">
+          <div class="w-24 h-24 bg-gradient-to-br from-red-500 to-orange-400 rounded-full mx-auto mb-6 flex items-center justify-center text-white text-3xl">
+            👨‍💼
+          </div>
+          <h3 class="text-xl font-bold mb-2">Creative Director</h3>
+          <p class="text-red-600 font-semibold mb-3">Design & Strategy</p>
+          <p class="text-gray-600 text-sm">Leading our creative vision and ensuring every design tells a compelling story.</p>
+        </div>
+        
+        <div class="team-card p-8 text-center">
+          <div class="w-24 h-24 bg-gradient-to-br from-blue-500 to-purple-400 rounded-full mx-auto mb-6 flex items-center justify-center text-white text-3xl">
+            👩‍🎨
+          </div>
+          <h3 class="text-xl font-bold mb-2">Lead Designer</h3>
+          <p class="text-red-600 font-semibold mb-3">Visual Communication</p>
+          <p class="text-gray-600 text-sm">Transforming concepts into visually stunning designs that capture brand essence.</p>
+        </div>
+        
+        <div class="team-card p-8 text-center">
+          <div class="w-24 h-24 bg-gradient-to-br from-green-500 to-teal-400 rounded-full mx-auto mb-6 flex items-center justify-center text-white text-3xl">
+            👨‍🔧
+          </div>
+          <h3 class="text-xl font-bold mb-2">Production Manager</h3>
+          <p class="text-red-600 font-semibold mb-3">Quality & Delivery</p>
+          <p class="text-gray-600 text-sm">Ensuring flawless execution and timely delivery of every single project.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission & Vision Section -->
+  <section class="py-20 px-6 bg-gradient-to-br from-gray-900 via-red-900 to-orange-900 text-white">
+    <div class="container mx-auto">
+      <div class="grid md:grid-cols-2 gap-12">
+        <div class="text-center md:text-left">
+          <div class="inline-block p-4 bg-white/10 rounded-full mb-6">
+            <span class="text-4xl">🎯</span>
+          </div>
+          <h3 class="text-3xl font-bold mb-6">Our Mission</h3>
+          <p class="text-lg text-gray-200 leading-relaxed">
+            To empower businesses and individuals by transforming their ideas into powerful visual communications 
+            that inspire, engage, and drive results. We're committed to delivering exceptional quality with 
+            speed and reliability that exceeds expectations.
+          </p>
+        </div>
+        
+        <div class="text-center md:text-left">
+          <div class="inline-block p-4 bg-white/10 rounded-full mb-6">
+            <span class="text-4xl">🚀</span>
+          </div>
+          <h3 class="text-3xl font-bold mb-6">Our Vision</h3>
+          <p class="text-lg text-gray-200 leading-relaxed">
+            To become West Africa's most trusted and innovative printing and branding partner, 
+            setting new standards for creativity, quality, and customer satisfaction while helping 
+            businesses build brands that stand the test of time.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="py-20 px-6 bg-gray-100">
+    <div class="container mx-auto text-center">
+      <h2 class="text-4xl font-bold mb-6">Ready to Work Together?</h2>
+      <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+        Let's bring your vision to life with our expertise and passion for exceptional design and printing.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="contact.html" class="bg-red-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-red-700 transform hover:scale-105 transition-all duration-300 shadow-lg">
+          Start Your Project
+        </a>
+        <a href="services.html" class="bg-white text-red-600 px-8 py-4 rounded-full font-semibold hover:bg-gray-50 transform hover:scale-105 transition-all duration-300 shadow-lg border-2 border-red-600">
+          View Our Services
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black text-white text-center py-8">
+    <div class="container mx-auto">
+      <div class="flex justify-center items-center mb-4">
+        <div class="h-8 w-8 bg-red-600 rounded-full flex items-center justify-center text-white font-bold mr-2">A</div>
+        <span class="font-bold text-xl">ADDWORKS PRINT</span>
+      </div>
+      <p class="text-gray-400">&copy; 2025 AddWorks Print. All Rights Reserved. | The Xpress Print & Branding Shop</p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu functionality
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    let isMenuOpen = false;
+
+    menuBtn.addEventListener('click', function() {
+      isMenuOpen = !isMenuOpen;
+      
+      if (isMenuOpen) {
+        mobileMenu.classList.remove('mobile-menu-hidden');
+        mobileMenu.classList.add('mobile-menu-visible');
+        menuBtn.style.transform = 'rotate(90deg)';
+      } else {
+        mobileMenu.classList.remove('mobile-menu-visible');
+        mobileMenu.classList.add('mobile-menu-hidden');
+        menuBtn.style.transform = 'rotate(0deg)';
+      }
+    });
+
+    // Close mobile menu when clicking on a link
+    const mobileLinks = mobileMenu.querySelectorAll('a');
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        isMenuOpen = false;
+        mobileMenu.classList.remove('mobile-menu-visible');
+        mobileMenu.classList.add('mobile-menu-hidden');
+        menuBtn.style.transform = 'rotate(0deg)';
+      });
+    });
+
+    // Intersection Observer for animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -100px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.animationPlayState = 'running';
+        }
+      });
+    }, observerOptions);
+
+    // Observe all animated elements
+    document.querySelectorAll('.animate-fade-up, .animate-slide-left, .animate-slide-right').forEach(el => {
+      el.style.animationPlayState = 'paused';
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>

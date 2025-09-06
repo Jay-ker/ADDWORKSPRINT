@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AddWorks Print - The Xpress Print & Branding Shop</title>
+  
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/index.css">
+  
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="css/js/images/ADDWORK LOGO.png">
+  
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+<!-- Header -->
+<header class="fixed w-full bg-white/95 backdrop-blur-sm z-50 shadow-lg">
+    <div class="container mx-auto flex items-center justify-between p-4">
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center gap-2">
+        <img src="css/js/images/WhatsApp Image 2025-08-25 at 3.29.19 PM.jpeg" alt="ADDWORKS Logo" class="h-10 w-10 rounded-full object-cover animate-pulse-glow" />
+        <span class="font-bold text-xl text-red-600">ADDWORKS</span>
+      </a>
+  
+            <!-- Desktop Menu -->
+            <nav class="hidden md:flex gap-6 font-medium">
+                <a href="index.html" class="text-red-600 font-semibold">Home</a>
+                <a href="about.html" class="hover:text-red-600 transition-colors">About</a>
+                <a href="services.html" class="hover:text-red-600 transition-colors">Services</a>
+                <a href="portfolio.html" class="hover:text-red-600 transition-colors">Portfolio</a>
+                <a href="contact.html" class="hover:text-red-600 transition-colors">Contact</a>
+            </nav>
+
+<!-- Mobile Button -->
+<button id="menu-btn" class="md:hidden text-2xl focus:outline-none transition-transform duration-300">
+    ☰
+  </button>
+  </div>
+  
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden bg-white shadow-lg md:hidden">
+    <div class="p-6">
+      <a href="index.html" class="block py-3 text-red-600 font-semibold border-b border-gray-200">Home</a>
+      <a href="about.html" class="block py-3 hover:text-red-600 transition-colors border-b border-gray-200">About</a>
+      <a href="services.html" class="block py-3 hover:text-red-600 transition-colors border-b border-gray-200">Services</a>
+      <a href="portfolio.html" class="block py-3 hover:text-red-600 transition-colors border-b border-gray-200">Portfolio</a>
+      <a href="contact.html" class="block py-3 hover:text-red-600 transition-colors">Contact</a>
+    </div>
+  </div>
+  </header>  
+    
+<!-- Hero Section with Video Background -->
+<section class="relative flex items-center justify-center text-center text-white overflow-hidden h-[75vh]">
+
+  <!-- Video Background -->
+  <div class="absolute inset-0 -z-30">
+    <video id="hero-video" class="w-full h-full object-cover" autoplay muted loop playsinline preload="auto">
+      <source src="css/js/images/WhatsApp Video 2025-09-04 at 12.57.34 AM.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <!-- Gradient overlay for branding -->
+  <div class="absolute inset-0 gradient-bg -z-20 opacity-60"></div>
+
+  <!-- Dark overlay for readability -->
+  <div class="absolute inset-0 bg-black/50 -z-10"></div>
+
+  <!-- Content -->
+  <div class="px-6 max-w-4xl relative z-10 py-20 md:py-32">
+    <div class="animate-float mb-8">
+      <div class="w-24 h-24 mx-auto bg-red-600/80 rounded-full flex items-center justify-center text-4xl animate-pulse-glow">
+        🎨
+      </div>
+    </div>
+    <h1 class="text-5xl md:text-7xl font-extrabold mb-6 hero-animate drop-shadow-2xl">
+      Add<span class="gradient-text">Works</span> Print
+    </h1>
+    <h2 class="text-2xl md:text-4xl font-light mb-4 hero-animate-delay-1">
+      Print That Speaks. Brand That Lasts.
+    </h2>
+    <p class="text-lg md:text-xl mb-8 hero-animate-delay-1 text-gray-200">
+      The Xpress Print & Branding Shop - Fast • Reliable • Creative
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center hero-animate-delay-2">
+      <a href="contact.html" class="bg-red-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-red-700 transform hover:scale-105 transition-all duration-300 shadow-xl">
+        Get a Quote
+      </a>
+      <a href="portfolio.html" class="bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-full font-semibold hover:bg-white/20 transform hover:scale-105 transition-all duration-300 border border-white/30">
+        View Our Work
+      </a>
+    </div>
+  </div>
+</section>
+  
+    <!-- Stats Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="stats-card p-6 text-center">
+                    <div class="text-3xl font-bold text-red-600 mb-2">500+</div>
+                    <p class="text-gray-600 font-medium">Projects Done</p>
+                </div>
+                <div class="stats-card p-6 text-center">
+                    <div class="text-3xl font-bold text-red-600 mb-2">200+</div>
+                    <p class="text-gray-600 font-medium">Happy Clients</p>
+                </div>
+                <div class="stats-card p-6 text-center">
+                    <div class="text-3xl font-bold text-red-600 mb-2">5+</div>
+                    <p class="text-gray-600 font-medium">Years Experience</p>
+                </div>
+                <div class="stats-card p-6 text-center">
+                    <div class="text-3xl font-bold text-red-600 mb-2">24/7</div>
+                    <p class="text-gray-600 font-medium">Support</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Preview Section -->
+    <section class="container mx-auto py-20 px-6">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="animate-slide-left">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 text-gray-800">
+                    Who <span class="gradient-text">We Are</span>
+                </h2>
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    AddWorks Print is Lagos's premier printing and branding shop. We specialize in Branding, Printing, Graphic Design, and Videography.
+                </p>
+                <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                    With a reputation for delivering fast and reliable results, we are your one-stop solution for all branding needs that make your business stand out.
+                </p>
+                
+                <div class="flex items-center gap-4 mb-8">
+                    <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center text-white text-2xl">
+                        ⚡
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-xl text-gray-800">Lightning Fast Delivery</h3>
+                        <p class="text-gray-600">Your projects completed and delivered on time, every time</p>
+                    </div>
+                </div>
+                
+                <a href="about.html" class="inline-block bg-red-600 text-white px-8 py-3 rounded-lg hover:bg-red-700 transform hover:scale-105 transition-all duration-300 shadow-lg">
+                    Learn More About Us
+                </a>
+            </div>
+            
+            <div class="animate-slide-right">
+                <!-- Studio Image Section -->
+                <div class="h-80 rounded-2xl shadow-2xl overflow-hidden flex items-center justify-center bg-gray-100">
+                  <img src="css/js/images/Adwork picture.jpeg" alt="Our Studio Image" class="h-full w-full object-cover" />
+                </div>
+                <div class="text-center mt-4">
+                  <p class="text-lg font-semibold">Our Studio Image</p>
+                  <small class="text-sm opacity-75">(800x600 recommended)</small>
+                </div>
+              </div>
+                  </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Services Preview Section -->
+    <section class="bg-gray-100 py-20 px-6">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">
+                    Our <span class="gradient-text">Services</span>
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Professional printing and branding solutions that elevate your business to new heights
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <!-- Fabric Box Branding -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover-scale text-center">
+                  <div class="service-icon">📦</div>
+                  <h3 class="font-bold text-xl mb-4">Fabric Box Branding</h3>
+                  <p class="text-gray-600 mb-6">Premium fabric box branding and packaging solutions that make your products irresistible</p>
+                  <div class="h-32 rounded-lg mb-4 overflow-hidden">
+                    <img src="css/js/images/ADDWORK LOGO.png" alt="Fabric Box Branding" class="h-full w-full object-cover" />
+                  </div>
+                </div>
+              
+                <!-- Vehicle Wrapping -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover-scale text-center">
+                  <div class="service-icon">🚗</div>
+                  <h3 class="font-bold text-xl mb-4">Vehicle Wrapping</h3>
+                  <p class="text-gray-600 mb-6">Professional vehicle wraps that turn your car into a powerful mobile billboard</p>
+                  <div class="h-32 rounded-lg mb-4 overflow-hidden">
+                    <img src="css/js/images/ADDWORK LOGO.png" alt="Vehicle Wrapping" class="h-full w-full object-cover" />
+                  </div>
+                </div>
+              
+                <!-- Wedding Stationery -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover-scale text-center">
+                  <div class="service-icon">💒</div>
+                  <h3 class="font-bold text-xl mb-4">Wedding Stationery</h3>
+                  <p class="text-gray-600 mb-6">Elegant wedding invitations and stationery that capture your special day perfectly</p>
+                  <div class="h-32 rounded-lg mb-4 overflow-hidden">
+                    <img src="css/js/images/ADDWORK LOGO.png" alt="Wedding Stationery" class="h-full w-full object-cover" />
+                  </div>
+                </div>
+              </div>              
+            <div class="text-center">
+                <a href="services.html" class="bg-red-600 text-white px-8 py-4 rounded-lg hover:bg-red-700 transform hover:scale-105 transition-all duration-300 shadow-lg font-semibold">
+                    View All Services
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Preview Section -->
+    <section class="container mx-auto py-20 px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">
+                Our <span class="gradient-text">Works</span>
+            </h2>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                Showcasing our best work and creative solutions that have helped businesses shine
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            <!-- Portfolio Image 1 -->
+            <div class="portfolio-hover rounded-2xl shadow-xl overflow-hidden relative">
+              <div class="h-64">
+                <img src="css/js/images/ADDWORK LOGO.png" alt="Fabric Box Project" class="object-cover w-full h-full" />
+              </div>
+              <div class="portfolio-overlay text-center absolute bottom-0 left-0 right-0 bg-white bg-opacity-80 p-4">
+                <h3 class="text-xl font-bold mb-2">Fabric Box Collection</h3>
+                <p>Premium Packaging Design</p>
+              </div>
+            </div>
+          
+            <!-- Portfolio Image 2 -->
+            <div class="portfolio-hover rounded-2xl shadow-xl overflow-hidden relative">
+              <div class="h-64">
+                <img src="css/js/images/ADDWORK LOGO.png" alt="Vehicle Wrap Project" class="object-cover w-full h-full" />
+              </div>
+              <div class="portfolio-overlay text-center absolute bottom-0 left-0 right-0 bg-white bg-opacity-80 p-4">
+                <h3 class="text-xl font-bold mb-2">Vehicle Wrap Project</h3>
+                <p>Mobile Marketing Solution</p>
+              </div>
+            </div>
+          
+            <!-- Portfolio Image 3 -->
+            <div class="portfolio-hover rounded-2xl shadow-xl overflow-hidden relative">
+              <div class="h-64">
+                <img src="css/js/images/ADDWORK LOGO.png" alt="Wedding Stationery" class="object-cover w-full h-full" />
+              </div>
+              <div class="portfolio-overlay text-center absolute bottom-0 left-0 right-0 bg-white bg-opacity-80 p-4">
+                <h3 class="text-xl font-bold mb-2">Wedding Stationery Suite</h3>
+                <p>Elegant Design Package</p>
+              </div>
+            </div>
+          </div>
+          
+        <div class="text-center">
+            <a href="portfolio.html" class="bg-red-600 text-white px-8 py-4 rounded-lg hover:bg-red-700 transform hover:scale-105 transition-all duration-300 shadow-lg font-semibold">
+                View Full Gallery
+            </a>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Why Choose Us Section -->
+    <section class="bg-gray-100 py-20 px-6">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">
+                    Why Choose <span class="gradient-text">AddWorks</span>?
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    We're not just another printing shop - we're your creative partners in success
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-6 rounded-2xl shadow-lg text-center hover:shadow-xl transition-all duration-300">
+                    <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-4">
+                        ⚡
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Lightning Fast</h3>
+                    <p class="text-gray-600">Express delivery without compromising quality</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-2xl shadow-lg text-center hover:shadow-xl transition-all duration-300">
+                    <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-4">
+                        🎯
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Precision Perfect</h3>
+                    <p class="text-gray-600">Attention to detail in every single project</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-2xl shadow-lg text-center hover:shadow-xl transition-all duration-300">
+                    <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-4">
+                        💡
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Creative Solutions</h3>
+                    <p class="text-gray-600">Innovative designs that make you stand out</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-2xl shadow-lg text-center hover:shadow-xl transition-all duration-300">
+                    <div class="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-4">
+                        🤝
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">24/7 Support</h3>
+                    <p class="text-gray-600">Always here when you need us most</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Perfectly Blended Hybrid Contact Section -->
+<section class="relative text-white py-20 px-6 overflow-hidden z-10">
+
+  <!-- Softly Blended Background Image -->
+  <div class="absolute inset-0 -z-30">
+    <img src="css/js/images/WhatsApp Image 2025-08-25 at 3.29.19 PM.jpeg" alt="Contact Background"
+      class="w-full h-full object-cover opacity-25 mix-blend-overlay blur-[1px] scale-100" />
+  </div>
+
+  <!-- Unified Gradient Overlay -->
+  <div class="absolute inset-0 bg-gradient-to-r from-purple-950 via-black to-red-900 backdrop-blur-xl opacity-90 -z-20"></div>
+
+  <!-- Content Container -->
+  <div class="container mx-auto text-center relative z-10">
+    <h2 class="text-4xl md:text-5xl font-extrabold mb-6 tracking-tight drop-shadow-xl">
+      Ready to Get Started?
+    </h2>
+    <p class="text-lg md:text-xl mb-10 text-gray-200 max-w-2xl mx-auto leading-relaxed drop-shadow-md">
+      Let's bring your vision to life with our expertise and passion for exceptional design and printing
+    </p>
+
+    <!-- Contact Info Grid -->
+    <div class="grid md:grid-cols-3 gap-8 mb-12">
+      <div class="text-center">
+        <div class="w-16 h-16 bg-white/10 border border-white/20 rounded-full flex items-center justify-center text-3xl mx-auto mb-4 shadow-lg backdrop-blur-sm">
+          📍
+        </div>
+        <h3 class="font-semibold text-lg mb-1 drop-shadow">Visit Our Studio</h3>
+        <p class="text-gray-200 text-sm">45 Channels TV Avenue, Opic Estate, Berger, Lagos, Nigeria</p>
+      </div>
+      <div class="text-center">
+        <div class="w-16 h-16 bg-white/10 border border-white/20 rounded-full flex items-center justify-center text-3xl mx-auto mb-4 shadow-lg backdrop-blur-sm">
+          📞
+        </div>
+        <h3 class="font-semibold text-lg mb-1 drop-shadow">Call Us Today</h3>
+        <p class="text-gray-200 text-sm">+234 (0) 701 807 4746</p>
+      </div>
+      <div class="text-center">
+        <div class="w-16 h-16 bg-white/10 border border-white/20 rounded-full flex items-center justify-center text-3xl mx-auto mb-4 shadow-lg backdrop-blur-sm">
+          ✉️
+        </div>
+        <h3 class="font-semibold text-lg mb-1 drop-shadow">Email Us</h3>
+        <p class="text-gray-200 text-sm">addworksprint@gmail.com</p>
+      </div>
+    </div>
+
+    <!-- Social Media Links -->
+    <div class="flex justify-center gap-4 mb-10">
+      <a href="https://instagram.com/addworks_print" target="_blank"
+        class="bg-white/20 hover:bg-white/30 p-3 rounded-full transition-all duration-300 transform hover:scale-110 shadow-md">📷</a>
+      <a href="https://facebook.com/AddworksPrint" target="_blank"
+        class="bg-white/20 hover:bg-white/30 p-3 rounded-full transition-all duration-300 transform hover:scale-110 shadow-md">👍</a>
+      <a href="https://tiktok.com/@addworks_print" target="_blank"
+        class="bg-white/20 hover:bg-white/30 p-3 rounded-full transition-all duration-300 transform hover:scale-110 shadow-md">🎵</a>
+    </div>
+
+    <!-- CTA Buttons -->
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="contact.html"
+        class="bg-white text-red-800 font-semibold px-6 py-3 rounded-full hover:bg-gray-100 transform hover:scale-105 transition-all duration-300 shadow-lg ring-2 ring-red-700/40">
+        Contact Us Now
+      </a>
+      <a href="services.html"
+        class="bg-red-900/90 backdrop-blur-md text-white font-semibold px-6 py-3 rounded-full hover:bg-red-800 transform hover:scale-105 transition-all duration-300 border border-white/20 shadow-lg ring-2 ring-white/10">
+        View Services
+      </a>
+    </div>
+  </div>
+</section>
+    <!-- Footer -->
+    <footer class="bg-black text-white py-8">
+        <div class="container mx-auto text-center">
+            <div class="flex justify-center items-center mb-4">
+                <div class="h-10 w-10 bg-red-600 rounded-full flex items-center justify-center text-white font-bold mr-3">A</div>
+                <span class="font-bold text-xl">ADDWORKS PRINT</span>
+            </div>
+            <p class="text-gray-400 text-sm">© 2025 AddWorks Print. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="css/js/index.js"></script>
+</body>
+</html>
