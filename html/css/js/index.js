@@ -198,4 +198,29 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+
+  // ✅ Gallery button toggle logic
+  const galleryButtons = document.querySelectorAll('.gallery-btn');
+  const galleryBoxes = document.querySelectorAll('.gallery-box');
+
+  galleryButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      // Remove active state from all buttons
+      galleryButtons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const category = btn.dataset.category;
+
+      // Hide all boxes
+      galleryBoxes.forEach(box => {
+        box.classList.remove('active');
+      });
+
+      // Show the selected box
+      const targetBox = document.querySelector(`.gallery-box[data-box="${category}"]`);
+      if (targetBox) {
+        targetBox.classList.add('active');
+      }
+    });
+  });
 });
